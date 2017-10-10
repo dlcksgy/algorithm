@@ -1,7 +1,7 @@
 import random
 
 def quicksort(L):
-    if (len(L) == 1) or (len(L) == 0):
+    if (len(L) <= 1):
         return L
     
     pivot = L[0]
@@ -15,7 +15,7 @@ def quicksort(L):
     return quicksort(left) + [pivot] + quicksort(right)
     
 def randomizedquicksort(L):
-        if (len(L) == 1) or (len(L) == 0):
+        if (len(L) <= 1):
                 return L
 
         pivot = int(random.random() * len(L))
